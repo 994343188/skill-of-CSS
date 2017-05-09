@@ -1,0 +1,11 @@
+用CSS+DIV实现鼠标经过显示隐藏层，鼠标离开不显示隐藏层的效果
+2007-03-12 20:56
+说实话，Js代码确实很强大，但是编码往往很麻烦，像这次我找了一圈我要的这种鼠标经过显示隐藏层的效果看到的都是一堆堆代码，而且不容易记忆，也就是“不人性化”。后来参考了我以前做的类似的效果：鼠标经过改变背景图的代码，形成这个“用CSS+DIV实现鼠标经过显示隐藏层，鼠标离开不显示隐藏层的效果”的方法，具体看代码：
+Quote
+<a href="/class.asp?class_ID=272" onMouseOver="document.all.menulayer_1.style.visibility=''" onMouseOut="document.all.menulayer_1.style.visibility='hidden'">關於我們</a>
+上面这段是超链接的文字部分，要注意的是其中的“menulayer_1”，这个可以自定义命名，一个超链接关联一个，不可重复。另外要注意的是“visibility='hidden'”，这个就是鼠标离开后，隐藏的层就会隐藏。
+Quote
+<div id="menulayer_1" class="menulayer" style="visibility: hidden; padding: 225px 0px 0px 9px;">About Us, About Blazing Flames.</div>
+这个就是默认隐藏的层的内容，注意他的ID要和之前的代码相呼应。
+
+代码就这么多，灵活运用很好玩。
